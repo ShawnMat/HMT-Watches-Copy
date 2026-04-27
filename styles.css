@@ -198,8 +198,9 @@ h2{
     height: 350px;
     border-radius: 5%;
 }
+/* flex to flexbox */
 .watch-categories{
-    display: flex;
+    display: flexbox;
     justify-content: center;
     gap: 25px;
 }
