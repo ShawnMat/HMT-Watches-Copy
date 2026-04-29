@@ -351,10 +351,11 @@ h2{
     /* bottom: 0%; */
 }
 #prev2{
+    /* left: 20% */
     /* top: 28%;
     left: -1%; */
     /* bottom: 0%; */
-    right: ;
+    right: 85%;
 }
 
 
@@ -463,6 +464,61 @@ h2{
     width: 200px;
     border-radius: 10px;   
 }
+.option:hover{
+    transform: scale(1.7);
+
+}
+
+/* Scroll Gallery 2 */
+.collection-watches{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    gap: 30px;
+    width: 70%;
+    overflow: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+}
+.collection-watches::-webkit-scrollbar{
+    display: none;
+}
+
+.collection-watches #collection-watches-option{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+.scroll-container{
+    position: relative;
+    /* width: 90%; */
+}
+
+.scroll-container button{
+    position: absolute;
+    top: 28%;
+    right: -1%;
+}
+#next3{
+    top: 28%;
+    right: 13%;
+    /* transform: translate(-20,-20) */
+    /* bottom: 0%; */
+}
+#prev3{
+    /* left: 20% */
+    /* top: 28%;
+    left: -1%; */
+    /* bottom: 0%; */
+    right: 85%;
+}
+
+
+
+
+
+
 /* #collection-banner{
     height:50%;
     position: relative;

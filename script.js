@@ -56,6 +56,7 @@ showSlide(index);
 startAutoSlide();
 
 
+//Scroll Gallery 1
 const slider = document.querySelector(".watch-images");
 const cards = document.querySelectorAll(".watch-cont");
 
@@ -72,6 +73,28 @@ document.getElementById("next2").addEventListener("click", () => {
 document.getElementById("prev2").addEventListener("click", () => {
   slider.scrollBy({
     left: -cardWidth,
+    behavior: "smooth"
+  });
+});
+
+//Scroll Gallery 2
+
+const slider2 = document.querySelector(".collection-watches");
+const cards2 = document.querySelectorAll(".watch-cont");
+
+const gap2 = 40; 
+const cardWidth2 = cards2[0].offsetWidth + gap2;
+
+document.getElementById("next3").addEventListener("click", () => {
+  slider2.scrollBy({
+    left: cardWidth2,
+    behavior: "smooth"
+  });
+});
+
+document.getElementById("prev3").addEventListener("click", () => {
+  slider2.scrollBy({
+    left: -cardWidth2,
     behavior: "smooth"
   });
 });
