@@ -98,3 +98,7 @@ document.getElementById("prev3").addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+
+
+                                                                                                  
