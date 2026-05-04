@@ -9,8 +9,10 @@
 <body>
     <!-- header -->
     <header class="header">
-        <div class="support">Support: 080-28385491/9380369917 /info@hmtwatches.in/</div>
-        <div class="mobile-support">Support</div>
+        <div class="support-container">
+            <div class="support">Support: 080-28385491/9380369917 /info@hmtwatches.in/</div>
+            <div class="mobile-support">Support</div>
+        </div>
         <div class="options">
             <select name="language" id="language">
                 <option value="default">Select language </option>
@@ -36,55 +38,60 @@
 
     <!-- nav-bar -->
     <nav class="nav-bar">
-        <div class="wat-container">
-            <p id="wat">WATCHES</p>
-            <div class="pop-up-watches">
-                <div class="pop-up1">
-                    <h4>SHOP FOR</h4>
-                    <p>Men</p>
-                    <p>Women</p>
-                    <p>Pair</p>
-                    <p>Unisex</p><br><br><br>
-                    <button class="pop-up-bt">View All</button>
-                </div>
-                <div class="pop-up2">
-                    <h4>SHOP BY TYPE</h4>
-                    <p>Quartz</p>
-                    <p>Automatic</p>
-                    <p>Mechanical</p><br><br><br><br>
-                    <button class="pop-up-bt">View All</button>
-                </div>
-                <div class="pop-up3">
-                    <h4>SHOP BY COLLECTIONS</h4>
-                    <p>Stellar</p>  
-                    <p>Plus</p>
-                    <p>Vihaan</p>
-                    <p>Amrut</p>
-                    <p>Sona</p><br><br>
-                    <button class="pop-up-bt">View All</button>
+        <div class="left-cont">
+            <div class="wat-container">
+                <p id="wat">WATCHES</p>
+                <!-- when hovered, below div will display -->
+                <div class="pop-up-watches">
+                    <div class="pop-up1">
+                        <h4>SHOP FOR</h4>
+                        <p>Men</p>
+                        <p>Women</p>
+                        <p>Pair</p>
+                        <p>Unisex</p><br><br><br>
+                        <button class="pop-up-bt">View All</button>
+                    </div>
+                    <div class="pop-up2">
+                        <h4>SHOP BY TYPE</h4>
+                        <p>Quartz</p>
+                        <p>Automatic</p>
+                        <p>Mechanical</p><br><br><br><br>
+                        <button class="pop-up-bt">View All</button>
+                    </div>
+                    <div class="pop-up3">
+                        <h4>SHOP BY COLLECTIONS</h4>
+                        <p>Stellar</p>  
+                        <p>Plus</p>
+                        <p>Vihaan</p>
+                        <p>Amrut</p>
+                        <p>Sona</p><br><br>
+                        <button class="pop-up-bt">View All</button>
+                    </div>
                 </div>
             </div>
-
+            <P>TOWER CLOCK</P>
+            <P>GIFTING</P>
         </div>
-        <P>TOWER CLOCK</P>
-        <P>GIFTING</P>
         <img src="/icons/logo.png" alt="logo" style="width: 150px; height: 31px;">
-        <p>ABOUT US</p>
-        <p>CONTACT US</p>
-        <div class="locator">
-            <img src="/icons/location.png" alt="locator" id="icons">
-            <p>STORE LOCATOR</p>
+        <div class="right-cont">
+            <p>ABOUT US</p>
+            <p>CONTACT US</p>
+            <div class="locator">
+                <img src="/icons/location.png" alt="locator" id="icons">
+                <p>STORE LOCATOR</p>
+            </div>
         </div>
+        
         <img src="/icons/search.png" alt="search" id="icons" style="width: 30px; height: 30px;" >
     </nav>
     <!-- slide-show-images -->
      <div class="slider">
          <div class="images">
              <img src="/images/image4.jpg" alt="image1" class="active">
-             <img src="/images/image5.jpg" alt="image2" >
-             <img src="/images/image4.jpg" alt="image3" > 
-             <img src="/images/image5.jpg" alt="image4" >
-             <img src="/images/image4.jpg" alt="image3" >
+             <img src="/images/image5.jpg" alt="image2" id="slider-image">
+             <img src="/images/image4.jpg" alt="image3" id="slider-image" > 
+             <img src="/images/image5.jpg" alt="image4" id="slider-image">
+             <img src="/images/image4.jpg" alt="image3" id="slider-image">
          </div>
          <button class="prev">&#10094;</button>
          <button class="next">&#10095;</button>
@@ -144,9 +151,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -158,9 +180,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -172,9 +209,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -186,9 +238,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -200,9 +267,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -214,9 +296,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                       <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -228,10 +325,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="watch-cont">
@@ -243,10 +354,24 @@
                     <h4>HMT JGGL 08 Brown</h4>
                     <p>Rs. 2350</p>
                     <div class="watch-btns">
-
-                        <img src="/icons/cart.png" alt="" id="btn-options">
-                        <img src="/icons/eye-solid.png" alt="" id="btn-options">
-                        <img src="/icons/repeat.png" alt="" id="btn-options">
+                        <div class="cart-tooltip-cont">
+                            <img src="/icons/cart.png" alt="" id="btn-options" class="cart-tooltip">
+                            <div class="tooltip-one">
+                                <p>Add to Cart</p>
+                            </div>
+                        </div>
+                        <div class="eye-tooltip-cont">
+                            <img src="/icons/eye-solid.png" alt="" id="btn-options" class="eye-tooltip">
+                            <div class="tooltip-two">
+                                <p>Quick View</p>
+                            </div>
+                        </div>
+                        <div class="repeat-tooltip-cont">
+                            <img src="/icons/repeat.png" alt="" id="btn-options" class="repeat-tooltip">
+                            <div class="tooltip-three">
+                                <p>Compare</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -288,7 +413,7 @@
             <div class="collection-watches">
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/23188544533.png" alt="" id="collection-watches-option">
                         </div>
                         <!-- <p>Vijay</p> -->
@@ -297,7 +422,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/032125154046.jpg" alt="" id="collection-watches-option">
                         </div>
                         
@@ -306,7 +431,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/28594529980.jpg" alt="" id="collection-watches-option">
                         </div>
                     </div>
@@ -314,7 +439,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/081880758978.jpg" alt="" id="collection-watches-option">
                         </div>                    
                     </div>
@@ -322,7 +447,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/23188544533.png" alt="" id="collection-watches-option">
                         </div>
                         <!-- <p>Vijay</p> -->
@@ -331,7 +456,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/032125154046.jpg" alt="" id="collection-watches-option">
                         </div>
                         
@@ -340,7 +465,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/28594529980.jpg" alt="" id="collection-watches-option">
                         </div>
                     </div>
@@ -348,7 +473,7 @@
                 </div>
                 <div class="watch-cont">
                     <div class="image-border-cont">
-                        <div class="option">
+                        <div class="collection-option">
                             <img src="https://www.hmtwatches.in/storage/app/public/image/collections/081880758978.jpg" alt="" id="collection-watches-option">
                         </div>                    
                     </div>
@@ -394,35 +519,55 @@
     <div class="footer">
         <div class="footer-cont">
             <div class="our-prods">
-                <div>Our products</div><br>
-                <div>Watches</div>
-                <div>Tower Clocks</div>
+                <div class="footer-dropdown" >
+                    Our products
+                    <p>&#8964;</p>
+                </div>
+                <div class="footer-content">
+                    <div>Watches</div>
+                    <div>Tower Clocks</div>
+                </div>
           </div>
             <div class="cust-serv">
-                <div>Customer Service</div><br>
-                <div>Payment Odivtion</div>
-                <div>Track Order</div>
-                <div>Find a Store</div>
-                <div>Gifting</div>
-                <div>Contact Us</div>
-                <div>FAQ</div>
+                <div class="footer-dropdown" >
+                    Customer Service
+                    <p>&#8964;</p>
+                </div>
+                <div class="footer-content">
+                    <div>Payment Odivtion</div>
+                    <div>Track Order</div>
+                    <div>Find a Store</div>
+                    <div>Gifting</div>
+                    <div>Contact Us</div>
+                    <div>FAQ</div>
+                </div>
             </div>
             <div class="divolicies">
-                <div>Policies</div><br>
-                <div>Return & Exchange</div>
-                <div>Cancellation</div>
-                <div>Shidivdiving</div>
-                <div>Warranty divolicies</div>
-                <div>Terms & Consitions</div>
-                <div>Privacy Policy</div>
+                <div class="footer-dropdown" >
+                    Policies 
+                    <p>&#8964;</p>
+                </div>
+                <div class="footer-content">
+                    <div>Return & Exchange</div>
+                    <div>Cancellation</div>
+                    <div>Shidivdiving</div>
+                    <div>Warranty divolicies</div>
+                    <div>Terms & Consitions</div>
+                    <div>Privacy Policy</div>
+                </div>
             </div>
             <div class="about-us">
-                <div>About Us</div><br>
-                <div>Cordivorate</div>
-                <div>Vision & Mission</div>
-                <div>Right to Information</div>
-                <div>Vigilance Corner</div>
-                <div>Career</div>
+                <div class="footer-dropdown" >
+                    About Us
+                    <p>&#8964;</p>
+                </div>
+                <div class="footer-content">
+                    <div>Cordivorate</div>
+                    <div>Vision & Mission</div>
+                    <div>Right to Information</div>
+                    <div>Vigilance Corner</div>
+                    <div>Career</div>
+                </div>
             </div>
             <div class="hmt-cont">
                 <div class="loc">
@@ -431,7 +576,7 @@
                     <div>Jalahalli, Bengaluru -560013</div>
                     <div>GSTIN : 29AAACH7073D2ZL</div><br>
                     <div>Follow Us On</div>
-                </div><br>
+                </div>
                 <div class="social-media">
                     <img src="/icons/facebook-f-brands-solid.png" alt="" id="media-icons">
                     <img src="/icons/Twitter-X.png" alt="" id="media-icons">
@@ -442,7 +587,60 @@
 
         </div>
 
+        <div class="accordian-container">
+            <div class="accordian-item">
+                <div class="accordian-header">
+                    Our Products
+                    <p>&#8964;</p>
+                </div>
+                <div class="accordian-content">
+                    <p>Watches</p>
+                    <p>Tower Clocks</p>
+                </div>
+            </div>
+            <div class="accordian-item">
+                <div class="accordian-header">
+                    Customer Service
+                </div>
+                <div class="accordian-content">
+                    <p>Payment Options</p>
+                    <p>Track Order</p>
+                    <p>Find a Store</p>
+                    <p>Gifting</p>
+                    <p>Contact us</p>
+                    <p>FAQ</p>
+                </div>
+            </div>
+            <div class="accordian-item">
+                <div class="accordian-header">
+                    Pollicies
+                </div>
+                <div class="accordian-content">
+                    <p>Return & Exchange</p>
+                    <p>Cancellation</p>
+                    <p>Shipping</p>
+                    <p>Warranty Policies</p>
+                    <p>Terms & COndition</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+            <div class="accordian-item">
+                <div class="accordian-header">
+                    About Us
+                </div>
+                <div class="accordian-content">
+                    <p>Corporate</p>
+                    <p>Vision & Mision</p>
+                    <p>Right to Information</p>
+                    <p>Vigilance Corner</p>
+                    <p>Careers</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    
     <script src="script.js"></script>
 </body>
 </html>
