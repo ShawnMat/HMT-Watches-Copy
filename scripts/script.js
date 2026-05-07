@@ -99,6 +99,31 @@ document.getElementById("prev3").addEventListener("click", () => {
   });
 });
 
+const menuBtn = document.getElementById("menu");
+const menuPopup = document.querySelector(".menu-popup");
 
+menuBtn.addEventListener("click", () => {
+  menuPopup.classList.toggle("active");
+});
 
+// window.scroll()
+const leftCont = document.querySelector(".left-cont");
+const rightCont = document.querySelector(".right-cont");
+
+window.addEventListener("scroll", function(){
+
+    if(window.scrollY > 100){
+
+        leftCont.classList.add("hide-nav");
+        rightCont.classList.add("hide-nav");
+
+    }
+    else{
+
+        leftCont.classList.remove("hide-nav");
+        rightCont.classList.remove("hide-nav");
+
+    }
+
+});
                                                                                                   

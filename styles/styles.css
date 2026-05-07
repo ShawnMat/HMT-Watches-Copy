@@ -4,6 +4,7 @@
     font-family: "Poppins";
     margin:0;
     box-sizing: border-box;
+    outline: 1px solid red;
 }
 /* body{
     background-color: rgb(169, 247, 0);
@@ -13,12 +14,13 @@ header{
     justify-content: space-between;
     background-color: #0033AB;
     width: 100%;
-    padding: 15px;
+    padding: 15px 20px;
     /* height: 60px; */
     height:auto;
     align-items: center;
     color: white;
     font-weight: bold;
+    flex-wrap: wrap;
 
 }
 header .support{
@@ -33,13 +35,22 @@ header .options{
     /* margin-right: 30px; */
 
 }
-/* .options{
+.options{
     gap: 40px;
-} */
+    flex-wrap: wrap;
+}
 #icons{
     width: 15px;
     height: 15px;
 }
+#menu{
+    width: 30px;
+    height: 30px;
+    display: none;
+
+    /* background-color: #000000; */
+}
+
 #language:hover{
     cursor: pointer;
 }
@@ -65,14 +76,18 @@ select{
 nav{
     height: 65px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     /* gap 30px; */
 
 }
+.search-icon{
+    display: none;
+}
 .nav-bar{
-    gap: 65px;
+    gap: 40px;
     /* display: flex;
     justify-content: space-evenly; */
+    justify-content: space-evenly;
     background-color: white;
     align-items: center;
     font-weight: bolder ;
@@ -85,6 +100,10 @@ nav{
     /* position: fixed; */
     /* width: 100%; */
     z-index: 999;
+}
+.hide-nav{
+    opacity: 0;
+    visibility: hidden;
 }
 nav p{
     font-size: small;
@@ -104,6 +123,7 @@ nav p:hover{
 }
 .wat-container{
     position: relative;
+    /* width: 100%; */
 }
 .wat-container:hover .pop-up-watches{
      opacity: 1;
@@ -125,7 +145,7 @@ nav p:hover{
     /* opacity: 0; */
     margin: 2%;
     padding: 30%;
-    width: 1000px ;
+    width: min(100%,1000px);
     /* border: #000000; */
     opacity: 0;
     visibility: hidden;
@@ -151,6 +171,31 @@ nav p:hover{
     display: flex;
     gap: 5px;
 }
+
+.menu-popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    display: none;
+    /* max-height: 0;
+    overflow: hidden; */
+    /* transition: max-height 0.4s ease; */
+    /* transition: opacity 0.5s ease; */
+    /* transition: background-color 0.3s ease; */
+}
+.menu-popup.active {
+    display: flex;
+}
+#popup-cont{
+    display: flex;
+    gap: 10px;
+
+}
+
 /*
 .slide-images{
     position: relative;
@@ -187,7 +232,7 @@ nav p:hover{
 .slider {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -283,10 +328,12 @@ h2{
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .men{
     position: relative;
+    max-width: 350px;
     /* width: 100%; */
 }
 .men h1{
@@ -307,17 +354,23 @@ h2{
 }
 .women{
     position: relative;
+    max-width: 350px;
+
     /* width: 100%; */
 }
 
 #watch-men{
-    width: 350px;
-    height: 350px;
+    /* width: 350px;
+    height: 350px; */
+    max-width: 100%;
+    height: auto;
     border-radius: 5%;
 }
 #watch-women{
-    width: 350px;
-    height: 350px;
+    /* width: 350px;
+    height: 350px; */
+    max-width: 100%;
+    height: auto;
     border-radius: 5%;
 }
 /* flex to flexbox */
@@ -325,6 +378,9 @@ h2{
     display: flex;
     justify-content: center;
     gap: 40px;
+    overflow-x:auto ;
+    white-space: nowrap;   /* prevents wrapping */
+    padding: 10px 0;
     /* below code is just for testing */
     /* overflow: auto; */
 }
@@ -757,6 +813,7 @@ h2{
 }
 .footer-cont{
     display: flex;
+    flex-wrap: wrap;
     gap: 9%;
     margin-top:30px;
     padding: 20px
@@ -825,7 +882,8 @@ h2{
     /* } */
 /* } */
 
-@media (max-width:767px){
+/* @media (max-width:767px){
+
     header{
         display: block;
     }
@@ -837,10 +895,6 @@ h2{
         font-weight: normal;
         font-size: 11px;
     }
-    /* select { */
-        /* width: rem; */
-        /* height: 0.931rem; */
-    /* } */
     .login-register{
         font-size: 10px;
         font-weight: normal;
@@ -854,7 +908,6 @@ h2{
         font-weight: normal;
     }
     header .options{
-        /* padding: 0px; */
         display: flex;
         justify-content: left;
         flex-wrap: wrap;
@@ -872,18 +925,9 @@ h2{
         display: none;
     }
     nav img{
-        /* display: flex; */
         justify-content: left;
     }
-    /* .images{
-        height:auto;
-    }
-    .slder img{
-        object-fit: cover;
-    }
-    .images{
-        height: fit-content;
-    } */
+
 
     .slider{
         width:100%;
@@ -912,14 +956,11 @@ h2{
         opacity: 1;
     }
     .men-women{
-        /* display: flex; */
         flex-wrap: wrap;
 
         justify-content: center;
-        /* gap: 20px   ; */
     }
     .shop-for{
-        /* display: flex; */
         justify-content: center;
     }
 
@@ -928,18 +969,13 @@ h2{
         gap:20px;
 
         overflow-x:auto;
-        /* white-space:nowrap; */
 
         padding:10px;
     }
 
     .option{
-        /* min-width:200px;
-        flex-shrink:0; */
 
-        /* background:#eee; */
         padding:20px;
-        /* border-radius:10px; */
     }
     .option h3{
         font-size: 15px;
@@ -956,49 +992,6 @@ h2{
         display: flex;
         flex-direction: column;
     }
-    /*
-    .footer-content{
-        display: none;
-        opacity: 0;
-    } */
-    
-    /* #footer-dropdown{
-    display:flex;
-    justify-content:space-between;
-
-    cursor:pointer;
-    }
-
-    .footer-content{
-        display:none;
-
-        flex-direction:column;
-        gap:10px;
-    } */
-
-    /* .footer-dropdown{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    cursor:pointer;
-    }
-
-    .footer-content{
-        display:none;
-
-        flex-direction:column;
-        gap:10px;
-
-        padding-left:10px;
-    }
-
-    .footer-content.show{
-        display:flex;
-    } */
-
-
-
     .footer
     {
             width:100%;
@@ -1030,7 +1023,6 @@ h2{
             transition:0.3s;
         }
 
-        /* Rotate arrow */
         .footer-dropdown.active p{
             transform:rotate(180deg);
         }
@@ -1068,4 +1060,46 @@ h2{
         }
 
 
+} */
+
+@media (max-width:767px){
+    .header{
+        width: 100%;
+    }
+
+    .nav-bar{
+        /* display: none; */
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    nav .search-icon{
+        display: block;
+    }
+    .nav-bar #icons{
+        display: none;
+    }
+    .left-cont{
+        display: none;
+        /* visibility: hidden; */
+    }
+    .right-cont{
+        display: none;
+        /* visibility: hidden; */
+    }
+    header .support{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .mobile-support{
+        display: block;
+    }
+    .left-cont, .right-cont {
+    gap: 1rem;
+    }
+    #next2, #prev2, #next3, #prev3 {
+        display: none;
+    }
 }
+
